@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Parcours Photo - La Plaine</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 40px 20px; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+        
+        /* La ligne verticale */
+        .timeline::after {
+            content: ''; position: absolute; width: 4px; background-color: #3498db;
+            top: 0; bottom: 0; left: 50%; margin-left: -2px;
+        }
+
+        .container { padding: 10px 40px; position: relative; width: 50%; box-sizing: border-box; }
+        
+        /* Les points de jonction */
+        .container::after {
+            content: ''; position: absolute; width: 20px; height: 20px; right: -10px;
+            background-color: #fff; border: 4px solid #3498db; top: 20px; border-radius: 50%; z-index: 1;
+        }
+
+        .left { left: 0; }
+        .right { left: 50%; }
+        .right::after { left: -14px; }
+
+        .card { padding: 15px; background-color: white; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        
+        .card img { width: 100%; border-radius: 8px; display: block; margin-bottom: 15px; }
+        .card h3 { margin: 0 0 10px 0; font-size: 1.2rem; color: #2980b9; }
+        .card p { margin: 0; font-size: 0.95rem; line-height: 1.5; color: #666; }
+
+        /* Responsive pour mobile */
+        @media screen and (max-width: 700px) {
+            .timeline::after { left: 31px; }
+            .container { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .container::after { left: 21px; }
+            .right { left: 0%; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Parcours Urbain pas à pas</h1>
+
+    <div class="timeline">
+        
+        <div class="container left">
+            <div class="card">
+                <img src="image1.jpeg" alt="Loisirs en plein air">
+                <h3>1. Détente Urbaine</h3>
+                <p>On commence la balade par un moment de vie sociale sur les esplanades du campus.</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="card">
+                <img src="image2.jpeg" alt="L'Humathèque">
+                <h3>2. Le Savoir</h3>
+                <p>Passage devant la majestueuse Humathèque et son architecture de verre.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="card">
+                <img src="image3.jpeg" alt="Bureaux modernes">
+                <h3>3. Horizon Moderne</h3>
+                <p>Les lignes droites et les reflets du nouveau centre d'affaires.</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="card">
+                <img src="Photo4.jpeg" alt="Logements et commerces">
+                <h3>4. Vie Quotidienne</h3>
+                <p>L'habitat moderne au cœur de la ville avec ses commerces de proximité.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="card">
+                <img src="Photo5.jpeg" alt="Star Academy">
+                <h3>5. Côté Médias</h3>
+                <p>L'entrée mythique des studios de télévision du quartier.</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="card">
+                <img src="Photo6.jpeg" alt="Parc et statue">
+                <h3>6. Nature et Art</h3>
+                <p>Un moment de calme sous les arbres, gardé par la statue du taureau.</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="card">
+                <img src="Photo7.jpeg" alt="Rue industrielle">
+                <h3>7. Héritage Industriel</h3>
+                <p>Fin de parcours dans les rues qui rappellent l'histoire ouvrière du secteur.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
